@@ -9,7 +9,7 @@
 Ajoutez ce package à votre projet Expo avec la commande suivante :
 
 ```sh
-expo install expo-gps-status-listener
+yarn install expo-gps-status-listener
 ```
 
 ## Utilisation
@@ -18,7 +18,7 @@ Importez le module et commencez à écouter les changements de statut du GPS :
 
 ```typescript
 import { useEffect } from "react";
-import { ExpoGpsStatusListener } from "expo-gps-status-listener";
+import ExpoGpsStatusListener from "expo-gps-status-listener";
 
 const [isGPSEnabled, setIsGPSEnabled] = useState(false);
 
