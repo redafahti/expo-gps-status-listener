@@ -18,17 +18,19 @@ Importez le module et commencez à écouter les changements de statut du GPS :
 
 ```typescript
 import { useEffect } from "react";
-import {
-	addGPSStatusListener,
-	removeGPSStatusListener,
-} from "expo-gps-status-listener";
+import { ExpoGpsStatusListener } from "expo-gps-status-listener";
+
+const [isGPSEnabled, setIsGPSEnabled] = useState(false);
 
 useEffect(() => {
-	const listener = addGPSStatusListener((status) => {
-		console.log("GPS Status:", status);
+	const subscription = ExpoGpsStatusListener.addGPSStatusListener((event) => {
+		console.log("GPS status changed:", event.isEnabled);
+		setIsGPSEnabled(event.isEnabled);
 	});
 
-	return () => removeGPSStatusListener(listener);
+	return () => {
+		subscription.remove();
+	};
 }, []);
 ```
 
