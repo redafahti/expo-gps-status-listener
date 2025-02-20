@@ -9,7 +9,7 @@
 Ajoutez ce package à votre projet Expo avec la commande suivante :
 
 ```sh
-yarn install expo-gps-status-listener
+yarn add expo-gps-status-listener
 ```
 
 ## Utilisation
