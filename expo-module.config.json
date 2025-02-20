@@ -1,0 +1,17 @@
+{
+  "platforms": [
+    "apple",
+    "android",
+    "web"
+  ],
+  "apple": {
+    "modules": [
+      "ExpoGpsStatusListenerModule"
+    ]
+  },
+  "android": {
+    "modules": [
+      "expo.modules.gpsstatuslistener.ExpoGpsStatusListenerModule"
+    ]
+  }
+}

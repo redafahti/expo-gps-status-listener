@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "expo-gps-status-listener": ["../src/index"],
+      "expo-gps-status-listener/*": ["../src/*"]
+    }
+  }
+}
